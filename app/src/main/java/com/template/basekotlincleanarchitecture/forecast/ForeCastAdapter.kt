@@ -36,7 +36,7 @@ class ForeCastAdapter(private val hourlyList: MutableList<Hourly>) :
 
         @SuppressLint("SetTextI18n")
         fun bind(hourly: Hourly) {
-            binding.tvDay.text = "${hourly.dt?.UTCtoLocal()} : "
+            binding.tvDay.text = "${hourly.dt?.UTCtoLocal()} "
             binding.tvTemp.text = "${hourly.temp?.toInt()} C"
         }
     }

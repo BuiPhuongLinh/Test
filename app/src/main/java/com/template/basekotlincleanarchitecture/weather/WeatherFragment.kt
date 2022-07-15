@@ -58,11 +58,11 @@ class WeatherFragment : BaseFragment<FragmentWeatherBinding, WeatherViewModel>()
         binding?.tvTemp?.setOnClickListener {
             if (binding?.tvTemp?.text.toString().contains("C")) {
                 binding?.tvTemp?.text =
-                    "${viewModel.weatherCurrentEventLiveData.value?.main?.temp?.convertCelsiusToFahrenheit()}F"
+                    "${viewModel.weatherCurrentEventLiveData.value?.main?.temp?.convertCelsiusToFahrenheit()} F"
 
             } else {
                 binding?.tvTemp?.text =
-                    "${viewModel.weatherCurrentEventLiveData.value?.main?.temp?.toInt()}C"
+                    "${viewModel.weatherCurrentEventLiveData.value?.main?.temp?.toInt()} C"
 
             }
 
@@ -86,7 +86,7 @@ class WeatherFragment : BaseFragment<FragmentWeatherBinding, WeatherViewModel>()
         }
 
         viewModel.weatherCurrentEventLiveData.observe(viewLifecycleOwner) {
-            binding?.tvTemp?.text = "${it?.main?.temp?.toInt().toString()}C"
+            binding?.tvTemp?.text = "${it?.main?.temp?.toInt().toString()} C"
             binding?.weatherCurrent = it
         }
     }
