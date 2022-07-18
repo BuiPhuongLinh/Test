@@ -3,10 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-    </data>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/consContainer"
         android:layout_width="match_parent"
@@ -18,7 +14,6 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:padding="@dimen/_5sdp"
-            android:text="abc"
             android:textSize="20sp"
             app:layout_constraintEnd_toStartOf="@+id/imgSearch"
             app:layout_constraintStart_toStartOf="parent"

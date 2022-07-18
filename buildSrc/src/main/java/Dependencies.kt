@@ -1,5 +1,5 @@
 object ApplicationId {
-    val id = "com.template.base"
+    val id = "com.cmc.demoweather"
 }
 
 object AndroidVersion {
@@ -52,6 +52,8 @@ object Versions {
     val roomVersion = "2.4.0-alpha03"
     val sdp = "1.1.0"
     val ssp = "1.1.0"
+    val mockk = "1.12.2"
+    val coreTesting = "2.1.0"
 }
 
 object Libraries {
@@ -114,5 +116,7 @@ object TestLibraries {
     val espresso = "androidx.test.espresso:espresso-core:${Versions.espressoCore}"
     val espressoContrib = "androidx.test.espresso:espresso-contrib:${Versions.espressoCore}"
     val junit = "androidx.test.ext:junit:${Versions.androidJunit}"
+    val mockk = "io.mockk:mockk:${Versions.mockk}"
+    val coreTesting = "androidx.arch.core:core-testing:${Versions.coreTesting}"
 
 }

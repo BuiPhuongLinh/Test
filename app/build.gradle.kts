@@ -89,6 +89,9 @@ dependencies {
     implementation(Libraries.sdp)
 
     testImplementation(TestLibraries.junit)
+    testImplementation(TestLibraries.mockk)
+    testImplementation(TestLibraries.coreTesting)
+
     androidTestImplementation(TestLibraries.androidTestRunner)
     androidTestImplementation(TestLibraries.espresso)
 }

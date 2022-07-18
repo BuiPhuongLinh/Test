@@ -3,6 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="foreCastHourModel"
+            type="com.cmc.domain.entities.Hourly" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/item"
         android:layout_width="match_parent"
@@ -11,23 +18,38 @@
 
         <TextView
             android:id="@+id/tvDay"
+            textTime="@{foreCastHourModel}"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/tvTemp"
+            app:layout_constraintEnd_toStartOf="@+id/tvHumidity"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="abc" />
 
         <TextView
             android:id="@+id/tvTemp"
+            textTemperature="@{foreCastHourModel}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/tvDay"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvDay"
+            tools:text="absc" />
+
+        <TextView
+            android:id="@+id/tvHumidity"
+            textHumidity="@{foreCastHourModel}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDay"
+            app:layout_constraintEnd_toStartOf="@id/tvTemp"
             app:layout_constraintTop_toTopOf="@+id/tvDay"
             tools:text="absc" />
 
